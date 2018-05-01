@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+   <style type="text/css">
+      .op{
+         padding: 20px%;
+      }
+      .op .selection {
+        margin-bottom: 1em;
+      }
+
+      .op .selection label {
+        display: inline-block;
+        width:40%;
+        margin: auto;
+        background-color: #4FE89B;
+        border-radius: 6px;
+        color: #28362F;
+        padding: 0.5em;
+        cursor: pointer;
+      }
+
+      .op .selection label:hover {
+         margin: 0 auto;
+        background-color: #BFF2D9;
+      }
+
+      .op .selection input[type=checkbox] {
+        display: none;
+        padding: 40px;
+        margin: 40px;
+      }
+
+      .op .selection input[type=checkbox]:checked ~ label {
+        background-color: #50506E;
+      }
+      .abhinav
+      {
+        background-color: lightgrey;
+        width: 300px;
+        border: 25px solid green;
+        padding: 25px;
+        margin: 25px;
+      }
+   </style>
+ </head>
+
+ 
+ 
+<body link="blue" style="background-color: #4A575A">
+
+    <form action = "http://localhost:5000/questionpage/{{quizidhaha}}/{{subway}}/{{QuestionNumber+1}}" method = "GET">
+      <fieldset>
+    <legend> Question Number {{QuestionNumber}} </legend>
+    
+            <h1> {{ question }} (MA-MCQ)</h1>
+            <br>
+            <div class = "op" >
+               <div class = "selection">
+               <input id = "1" type="checkbox" name="op" value="1" > <label for='1'>{{Question.opt1}}</label></div>
+
+               <div class = "selection">
+               <input id="2" type="checkbox" name="op" value="2"> <label for='2'>{{Question.opt2}}</label></div>
+
+               <div class = "selection">
+               <input id="3" type="checkbox" name="op" value="3"> <label for='3'>{{Question.opt3}}</label></div>
+
+               <div class = "selection">
+               <input id="4" type="checkbox" name="op" value="4"> <label for='4'>{{Question.opt4}}</label></div>
+
+            <br>
+
+        
+            <span style = font-size:20px; font-weight:bold; margin-left:150px;>
+            <span class = "selection">
+            <input id = "Next" type="submit" value="Next" style="background-color: #7d8c39; width: 15%; padding: 15px; border-radius: 6px; display: inline-block;"></span>
+            <br> <br>
+   
+   </fieldset>
+   </form>
+         
+      <br><a style="background-color: #008080; width: 15%; padding: 20px; border-radius: 6px; display: inline-block; text-align: center; float:right; color:#0C0A09; margin-right: 30px" href ="/logoutinmiddle" > Logout</a>
+   </body>
+</html>

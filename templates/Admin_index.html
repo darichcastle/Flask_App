@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Quiz Portal</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+    
+    /* Remove the jumbotron's default bottom margin */ 
+     .jumbotron {
+      margin-bottom: 0;
+      background-image:url("static/styles/lol3.jpg")
+    }
+   
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+<!-- background="static/styles/lol5.jpg
+ -->
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>IIIT-H Quiz Portal</h1>      
+    <p>Inquisitiveness is Awesome!</p>
+  </div>
+</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/welcome">Home</a></li>
+
+
+        <li><a href="/userstable">Leaderboard</a></li>
+        <li><a href="/renderedit">Edit Profile</a></li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/youraccount"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+        <li><a href="/logout"><span></span> Logout </a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-4"> <a href =  "http://localhost:5000/subcategorypagesports">
+      <div class="panel panel-primary">
+        <div class="panel-heading">SPORTS</div>
+        <div class="panel-body"><img src="https://guardian.ng/wp-content/uploads/2016/06/Sports.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"></div>
+      </div>
+    </div> </a>
+    <div class="col-sm-4"> <a href =  "http://localhost:5000/subcategorypagemusic">
+      <div class="panel panel-danger">
+        <div class="panel-heading">MUSIC</div>
+        <div class="panel-body"><img src="https://i.ytimg.com/vi/aSMH1yivaZo/maxresdefault.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"></div>
+      </div>
+    </div> </a>
+    <div class="col-sm-4"> <a href =  "http://localhost:5000/subcategorypagecinema">
+      <div class="panel panel-success">
+        <div class="panel-heading">CINEMA</div>
+        <div class="panel-body"><img src="http://www.ashfordcastle.com/-/media/ttc/rch/ashford-castle/main-carousel/mobile/ash-cinema-03-1024x576.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"></div>
+      </div>
+    </div> </a>
+    <div class="col-sm-4"> <a href =  "http://localhost:5000/addquestion">
+      <div class="panel panel-danger">
+        <div class="panel-heading">ADD QUESTIONS</div>
+        <div class="panel-body"><img src="https://hips.htvapps.com/htv-prod-media.s3.amazonaws.com/images/bon-jovi-getty-1523756000.jpg?crop=1.00xw:0.814xh;0,0.0425xh&resize=900:*" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Admin privilege</div>
+      </div>
+    </div>
+    <div class="col-sm-4"> <a href =  "http://localhost:5000/showall">
+      <div class="panel panel-danger">
+        <div class="panel-heading">VIEW ALL</div>
+        <div class="panel-body"><img src="http://ultimateclassicrock.com/files/2014/10/BonJovi.jpg?w=980&q=75" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Admin privilege</div>
+      </div>
+    </div>
+    <div class="col-sm-4">  <a href =  "http://localhost:5000/deletequestion">
+      <div class="panel panel-danger">
+        <div class="panel-heading">DELETE QUESTIONS</div>
+        <div class="panel-body"><img src="https://www.hellomagazine.com/imagenes/healthandbeauty/hair/2017071340620/penelope-cruz-blonde-hair-donatella-versace-film-role/0-212-576/penelope-t.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Admin privilege</div>
+      </div>
+    </div> </a>
+  </div>
+</div><br>
+
+
+<footer class="container-fluid text-center">
+  <p>Abhinav Gupta and Shreyas Shankar</p>  
+</footer>
+
+</body>
+</html>
+<!-- https://placehold.it/150x80?text=IMAGE -->

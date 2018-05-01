@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+   <body link="blue">
+    <fieldset>
+      <legend>Question Details</legend>
+      <table border = 1 cellspacing=5 width=50% height=50px bgcolor="#ffff9f">
+        <tr>
+	    <th> Sno </td>
+
+            <th>Username</td>
+            <th>QID</td>
+            <th> Subcategory </td>
+            <th>High Score</td>
+            <th>number of attempts</td>
+            <th>Uptil Now</td>
+         </tr>
+         
+         {% for x in object1 %}
+            <tr>
+               <td> {{x.id}}</td>
+               <td>{{ x.username }}</td>
+	             <td>{{ x.quiz_id }}</td>
+               <td>{{ x.subcategory }}</td>
+               <td>{{ x.high_score }}</td>
+               <td>{{ x.attempts }}</td>
+               <td>{{ x.score_uptilnow }}</td>
+
+            </tr>
+
+         {% endfor %}
+      </table> 
+      <fieldset>
+      <br><a href = "/welcome">Go back to home page</a>
+   </body>
+</html>

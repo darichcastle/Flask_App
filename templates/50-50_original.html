@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+   <body link="blue">
+    <form action = "http://localhost:5000/questionpage/{{quizidhaha}}/{{subway}}/{{QuestionNumber+1}}" method = "GET">
+    
+            <h1> {{question}} </h1>
+            <br>
+            <input type="radio" name="op" value="{{name1}}"> {{option1}} <br>
+            <input type="radio" name="op" value="{{name2}}"> {{option2}} <br>
+            
+
+        
+            <div style = font-size:20px; font-weight:bold; margin-left:150px;><br>
+            <input type = "submit" value = "Next" /> 
+
+
+   
+   </fieldset>
+      </form>
+         
+      <br><a href = "/">Go back to home page</a>
+   </body>
+</html>
+
+<!-- {% if name %}
+    <h1>Hello, {{name}} !</h1>
+    {% else %}
+    <h1>Hello, a thing with no name</h1>
+    {% endif %} -->

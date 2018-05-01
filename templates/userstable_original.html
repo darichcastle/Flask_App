@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+   <body link="blue">
+    <fieldset>
+      <legend>Question Details</legend>
+      <table border = 1 cellspacing=5 width=50% height=50px bgcolor="#ffff9f">
+        <tr>
+	    <th> username </td>
+
+            <th>password</td>
+            <th>staterestore</td>
+            <th> ID Left </td>
+         </tr>
+         
+         {% for x in obj %}
+            <tr>
+               <td> {{x.username}}</td>
+               <td>{{ x.password }}</td>
+	             <td>{{ x.staterestore }}</td>
+               <td>{{ x.idleft }}</td>
+
+            </tr>
+
+         {% endfor %}
+      </table> 
+      <fieldset>
+      <br><a href = "/welcome">Go back to home page</a>
+   </body>
+</html>

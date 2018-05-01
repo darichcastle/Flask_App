@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Your Account</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bootstrap.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/font-awesome.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/animate.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/select2.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/perfect-scrollbar.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/util.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/main.css') }}">
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  	<style>
+	    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+	    .navbar {
+	      margin-bottom: 50px;
+	      border-radius: 0;
+	    }
+	    
+	    /* Remove the jumbotron's default bottom margin */ 
+	     .jumbotron {
+	      margin-bottom: 0;
+	      background-image:url("static/styles/lol3.jpg")
+	    }
+	   
+	    /* Add a gray background color and some padding to the footer */
+	    footer {
+	      background-color: #f2f2f2;
+	      padding: 25px;
+	    }
+	    a {
+        	-webkit-transition: all 200ms ease;
+        	-moz-transition: all 200ms ease;
+        	-ms-transition: all 200ms ease;
+        	-o-transition: all 200ms ease;
+        	transition: all 200ms ease; 
+        
+        	-webkit-transform: translate3d(0, 0, 0);
+        	-webkit-backface-visibility: hidden;
+        	
+        	opacity: 1;
+        	}
+        
+            a:hover {
+        	    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE 8 */
+        	    filter: alpha(opacity=50); /* IE7 */
+        	    opacity: 0.6;
+                }
+
+                a, a:visited, a:active {
+                    color: #fff;
+                    text-decoration: none;
+                    }
+  	</style>
+<!--===============================================================================================-->
+</head>
+<body>
+
+	<div class="jumbotron">
+	  <div class="container text-center">
+	    <h1>IIIT-H Quiz Portal</h1>      
+	    <p>Inquisitiveness is Awesome!</p>
+	  </div>
+	</div>
+
+<!-- 	<h1> <center> Your statistics of various quizzes! </center> </h1>
+ --><a href="/welcome"> Go back Home </a>
+
+	<!-- <nav class="navbar navbar-inverse">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>                        
+	      </button>
+	      <a class="navbar-brand" href="#">Logo</a>
+	    </div>
+	    <div class="collapse navbar-collapse" id="myNavbar">
+	      <ul class="nav navbar-nav">
+	        <li class="active"><a href="/welcome">Home</a></li>
+	        <li><a href="#">About</a></li>
+	        <li><a href="/userstable">Leaderboard</a></li>
+	        <li><a href="#">Quizzes</a></li>
+	        <li><a href="#">Contact</a></li>
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="/youraccount"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+	        <li><a href="/logout"><span></span> Logout </a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav> -->
+	
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+
+
+				<div class="table100 ver3 m-b-110">
+					<div class="table100-head">
+						<table>
+							<thead>
+								<tr class="row100 head">
+									<th class="cell100 column1">Quiz Id</th>
+									<th class="cell100 column2">Subcategory</th>
+									<th class="cell100 column3">High Score</th>
+									<th class="cell100 column4">Number of attempts</th>
+									<!-- <th class="cell100 column5">Spots</th> -->
+								</tr>
+							</thead>
+						</table>
+					</div>
+
+					<div class="table100-body js-pscroll">
+						<table>
+							<tbody>
+								{% for x in object1 %}
+								<tr class="row100 body">
+									<td class="cell100 column1">{{x.quiz_id}}</td>
+									<td class="cell100 column2">{{x.subcategory}}</td>
+									<td class="cell100 column3">{{x.high_score}}</td>
+									<td class="cell100 column4">{{x.attempts}}</td>
+									<!-- <td class="cell100 column5">10</td> -->
+								</tr>
+								{% endfor %}
+
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				
+				
+			</div>
+		</div>
+	</div>
+	<!-- <a href="/welcome"> Go back Home </a>
+	<h1> lol </h1> -->
+
+<!--===============================================================================================-->	
+	<script src="{{ url_for('static',filename='styles/jquery-3.2.1.min.js') }}"></script>
+
+
+
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="{{ url_for('static',filename='styles/popper.js') }}"></script>
+	<script src="{{ url_for('static',filename='styles/bootstrap.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<script src="{{ url_for('static',filename='styles/select2.min.js') }}"></script>
+
+<!--===============================================================================================-->
+	<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script src="{{ url_for('static',filename='styles/perfect-scrollbar.min.js') }}"></script>
+	<script>
+		$('.js-pscroll').each(function(){
+			var ps = new PerfectScrollbar(this);
+
+			$(window).on('resize', function(){
+				ps.update();
+			})
+		});
+			
+		
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+	<script src="{{ url_for('static',filename='styles/main.js') }}"></script>
+
+
+</body>
+</html>

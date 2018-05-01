@@ -1,0 +1,57 @@
+<html>
+  <h2 style = "text-align: center;">Registration Form</h2>
+   <body>
+      <form action = "http://localhost:5000/addrec" method = "POST">
+       <fieldset>
+         <legend>enter a question</legend>
+	 
+	
+	<div style = font-size:20px; font-weight:bold; margin-left:150px;><br>
+          Enter the quiz id<br> <input type = "text" name = "qid" required/>
+	</div> 
+	<div style = font-size:20px; font-weight:bold; margin-left:150px;><br>
+          Enter the category<br> <input type = "text" name = "category" required/>
+	</div> 
+	<div style = font-size:20px; font-weight:bold; margin-left:150px;><br>
+          Enter the sub-category id<br> <input type = "text" name = "sid" required/>
+	</div> 
+	<div style = font-size:20px; font-weight:bold; margin-left:150px;><br>
+          Enter the subcategory<br> <input type = "text" name = "subcategory" required/>
+	</div> 
+	<div style = font-size:20px; font-weight:bold; margin-left:150px;><br>
+          isitnew? <br> <input type = "text" name = "isitnew" required/>
+	</div> 
+
+	<div style = font-size:20px; font-weight:bold; margin-left:150px;><br>
+          Enter the question<br> <input type = "text" name = "nm" required/>
+	</div>
+	<div style = font-size:20px; font-weight:bold; margin-left:150px;><br>
+	  Enter Option 1<br> <input type = "text" name = "op1" />
+	</div>
+	<div style = font-size:20px; font-weight:bold; margin-left:150px;><br>
+	    Enter Option 2:<br> <input type = "text" name = "op2" required/>
+	</div>
+        <div style = font-size:20px; font-weight:bold; margin-left:150px;><br>
+	   Enter option 3:<br> <input type = "text" name = "op3"/>
+	</div>
+	</div>
+        <div style = font-size:20px; font-weight:bold; margin-left:150px;><br>
+	   Enter option 4:<br> <input type = "text" name = "op4"/>
+	</div>
+	<div style = font-size:20px; font-weight:bold; margin-left:150px;><br>
+          Enter the type of question. (1 for mcq, 2 for mamcq) <br> <input type = "text" name = "typeofquestion" required/>
+	</div> 
+	<div style = font-size:20px; font-weight:bold; margin-left:150px;><br>
+	  Enter Answer:<br> <input type = "text" name = "ans" required/>
+	</div>
+	<div style = font-size:20px; font-weight:bold; margin-left:150px;><br>
+            <input type = "submit" value = "submit" />
+	</div>
+	
+
+	
+	</fieldset>
+      </form>
+      <br><a href = "/welcome">Go back to home page</a>
+   </body>
+</html>

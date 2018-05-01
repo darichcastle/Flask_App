@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+   <body link="blue">
+    <form action = "http://localhost:5000/questionpage/{{quizidhaha}}/{{subway}}/{{QuestionNumber+1}}" method = "GET">
+    
+            <h1> {{ Question.question }} </h1>
+            <br>
+            <input type="radio" name="op" value="1"> {{Question.opt1}} <br>
+            <input type="radio" name="op" value="2"> {{Question.opt2}} <br>
+            <input type="radio" name="op" value="3"> {{Question.opt3}} <br>
+            <input type="radio" name="op" value="4"> {{Question.opt4}} <br>
+            <a href="http://localhost:5000/questionpage/{{quizidhaha}}/{{subway}}/{{QuestionNumber}}/50-50"> Lifeline </a>
+
+        
+            <div style = font-size:20px; font-weight:bold; margin-left:150px;><br>
+            <input type = "submit" value = "Next" /> 
+
+
+   
+   </fieldset>
+      </form>
+         
+      <br><a href = "/logoutinmiddle">Logout</a>
+   </body>
+</html>

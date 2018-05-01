@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+   <body link="blue">
+    <fieldset>
+      <legend>Question Details</legend>
+      <table border = 1 cellspacing=5 width=50% height=50px bgcolor="#ffff9f">
+        <tr>
+	    <th> Question number </td>
+
+            <th>Question</td>
+            <th>Answer</td>
+            <th> Quiz ID </td>
+            <th>SubId</td>
+         </tr>
+         
+         {% for x in questions %}
+            <tr>
+               <td> {{x.id}}</td>
+               <td>{{ x.question }}</td>
+	             <td>{{ x.answer }}</td>
+               <td>{{ x.quiz_id }}</td>
+               <td>{{ x.sub_id }}</td>
+
+            </tr>
+
+         {% endfor %}
+      </table> 
+      <fieldset>
+      <br><a href = "/welcome">Go back to home page</a>
+   </body>
+</html>
