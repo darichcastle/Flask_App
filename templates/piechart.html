@@ -1,5 +1,32 @@
 <html>
   <head>
+    <title>Quiz Portal</title>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/youraccount.css') }}">
+  <style>
+    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+    
+    /* Remove the jumbotron's default bottom margin */ 
+     .jumbotron {
+      margin-bottom: 0;
+      background-image:url("static/styles/lol3.jpg")
+    }
+   
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
@@ -10,9 +37,10 @@
         var data = google.visualization.arrayToDataTable([
           ['username', 'High score'],
           {% for x in obj %}
-          [{{x.username}},  {{x.high_score}} ],
+          // [{{x.username}},  {{x.high_score}} ],
+          ['{{x.username}}', {{x.high_score}}],
           {% endfor %}
-          ["Shrey",5]
+          
 
         ]);
 
@@ -26,7 +54,40 @@
       }
     </script>
   </head>
-  <body>
-    <div id="piechart" style="width: 900px; height: 500px;"></div>
-  </body>
+  <body style="background-color: #ffffff">
+    <div class="jumbotron">
+  <div class="container text-center">
+    <h1>IIIT-H Quiz Portal</h1>
+    <p>Inquisitiveness is Awesome!</p>
+  </div>
+</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/welcome">Home</a></li>
+        
+        <li><a href="/userstable">Leaderboard</a></li>
+        <li><a href="/renderedit">Edit Profile</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/youraccount"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+        <li><a href="/logout"><span></span> Logout </a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <h3> <center> Quiz Statistics </center> </h3>
+    <center> <div id="piechart" style="width: 900px; height: 500px;"> </div> </center
+>  </body>
 </html>
+
